@@ -1,0 +1,23 @@
+public class Students {
+
+    public static void main(String[] args) {
+        Student Other = new Student();
+        System.out.println(Other.name);
+    }
+}
+class Student {
+    int roll;
+    String name;
+    float marks;
+
+    Student() {
+        this(0,"default Student",100.0f);
+
+    }
+
+    Student(int roll, String name, float marks) {
+        this.roll = roll;
+        this.name = name;
+        this.marks = marks;
+    }
+}
