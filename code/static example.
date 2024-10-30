@@ -1,0 +1,22 @@
+public class Static {
+    public static void main(String[] args){
+
+Human person1=new Human("kash",18,30000);
+Human person2=new Human("kumar",81,9999);
+        System.out.println(person1.population);
+        System.out.println(person2.population);
+
+    }
+}
+class Human {
+    String name;
+    int age;
+    int salary;
+    static long population;
+      Human(String name, int age,int salary){
+        this.name=name;
+        this.age=age;
+        this.salary=salary;
+        Human.population +=1;
+     }
+}
