@@ -1,0 +1,62 @@
+public class Inheritance {
+    public static void main(String[] args){
+        Box box=new Box();
+        System.out.println(box.l+" "+ box.h+" "+ box.w);
+        Box box1=new Box(4);
+        System.out.println(box1.l+" "+ box1.h+" "+ box1.w);
+        Box box2=new Box(box);
+        System.out.println(box2.l+" "+ box2.h+" "+ box2.w);
+        // Inheritance
+        BoxWeight box3=new BoxWeight();
+        System.out.println(box3.weight+ " "+ box3.l+" "+ box3.h+" "+ box3.w);
+        BoxWeight box4=new BoxWeight(1,2,3,4);
+        System.out.println(box4.weight+ " "+ box4.l+" "+ box4.h+" "+ box4.w);
+
+
+    }
+
+}
+class Box{
+    double l;
+    double h;
+    double w;
+    Box(){
+        this.l=-1;
+        this.h=-1;
+        this.w=-1;
+    }
+    // cube.
+    Box(double side){
+        this.l=side;
+        this.h=side;
+        this.w=side;
+
+    }
+    Box(double l, double h, double w){
+        this.l=l;
+        this.h=h;
+        this.w=w;
+
+    }
+    Box(Box old){
+        this.l=old.l;
+        this.h= old.h;
+        this.w=old.w;
+    }
+}
+class BoxWeight extends Box{
+    double weight;
+    BoxWeight(){
+        this.weight=5;
+    }
+    public BoxWeight(double l, double h, double w,double weight){
+        this.l=l;
+        this.h=h;
+        this.w=w;
+        this.weight=weight;
+
+    }
+
+}
+
+
