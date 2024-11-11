@@ -1,0 +1,32 @@
+public  class Abstract {
+    public static void main(String[] args){
+        son son=new son();
+        son.carrer();
+        daghter daughter=new daghter();
+        daughter.carrer();
+
+
+    }
+}
+abstract class parent{
+    abstract void carrer();
+    
+
+}
+class son extends parent{
+    @Override
+    void carrer() {
+        System.out.println("I am going to be a coder ");
+    }
+
+   
+}
+class daghter extends parent{
+    @Override
+    void carrer() {
+        System.out.println("I am going to be a doctor");
+    }
+
+    
+}
+
