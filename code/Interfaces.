@@ -1,0 +1,59 @@
+public class Interfaces {
+    public static void main(String[] args) {
+        car car=new car();
+        car.start();
+        car.brake();
+        car.acc();
+        
+    }
+    
+
+}
+ interface Engine{
+    int price=70000;
+    void start();
+
+    void acc();
+
+
+}
+interface Brake{
+    void brake();
+}
+interface Media{
+    void start();
+    void stop();
+
+}
+class car implements Engine,Brake,Media{
+
+
+    @Override
+    public void brake() {
+        System.out.println("I brake like normal car");
+
+    }
+
+
+    @Override
+    public void start() {
+        System.out.println("I start like normal car");
+
+
+    }
+
+
+    @Override
+    public void stop() {
+        System.out.println("I  stop like  normal car");
+
+    }
+
+
+    @Override
+    public void acc() {
+        System.out.println("I accelerate like a normal car");
+
+    }
+}
+
