@@ -31,7 +31,7 @@ class CustomArrayList {
 
     }
 
-    private void resize() {
+    public void resize() {
         int[] temp=new int[data.length*2];
         //have to copy current data in new array
         for (int i=0;i<data.length;i++){
@@ -41,7 +41,7 @@ class CustomArrayList {
     }
 
 
-    private boolean isFull() {
+    public boolean isFull() {
         return size==data.length;
 
     }
